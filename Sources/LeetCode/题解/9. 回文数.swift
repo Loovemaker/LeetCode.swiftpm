@@ -11,26 +11,6 @@ public extension Solution {
             return false
         }
         
-        return x == Self.reverse(x)
-    }
-    
-    static func reverse(_ x: Int) -> Int {
-        var current = x
-        var result = 0
-        
-        let exponent = 10
-        
-        while current != 0 {
-            result *= exponent
-            
-            result += current % exponent
-
-            current = current / exponent
-        }
-        guard result.isInt32 else {
-            return 0
-        }
-        
-        return result
+        return x == reverse(x)
     }
 }
