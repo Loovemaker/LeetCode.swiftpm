@@ -14,11 +14,13 @@ extension LeetCodeTests {
             ([1, 1], [1,])
         }
         
-        casePairs.xctAssertEqual {
-            var data = $0
-            let count = solution.removeDuplicates(&data)
-            XCTAssertEqual(count, data.count)
-            return data
+        for method in solution.removeDuplicates_all {
+            casePairs.xctAssertEqual {
+                var data = $0
+                let count = method(&data)
+                XCTAssertEqual(count, data.count)
+                return data
+            }
         }
     }
 }
