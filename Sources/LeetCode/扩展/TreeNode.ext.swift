@@ -24,7 +24,7 @@ extension TreeNode {
     }
 }
 
-extension Optional: Equatable where Wrapped: TreeNode {
+extension Optional where Wrapped: TreeNode {
     /// 判断两个树是否相等
     /// - Parameters:
     ///   - lhs: 左边的树
