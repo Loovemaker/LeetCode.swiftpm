@@ -16,6 +16,12 @@ extension ListNode {
         self.init(result.val, result.next)
     }
 }
+extension Sequence where Element == Int {
+    /// 由序列生成链表
+    var asListNode: ListNode? {
+        ListNode(from: self)
+    }
+}
 
 extension ListNode: Equatable {
     /// 对应的数组序列
