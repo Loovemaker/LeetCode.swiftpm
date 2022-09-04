@@ -65,3 +65,33 @@ extension ListNode {
         return next
     }
 }
+
+extension ListNode {
+    /// 从链表中移除下一个节点
+    func removeNext() {
+        self.next = self.next?.next
+    }
+}
+
+extension Optional where Wrapped == ListNode {
+    typealias Predicate = (Int) throws -> Bool
+    
+    /// 移除值符合条件的节点
+    /// - Parameter predicate: 条件
+    mutating func remove(where predicate: Predicate) rethrows {
+        let dummy = ListNode(0, self)
+        var prev = dummy
+        var current = self
+        
+        while current != nil {
+            defer { current = current?.next }
+            guard try predicate(current!.val) else {
+                prev = prev.next!
+                continue
+            }
+            prev.removeNext()
+        }
+        
+        self = dummy.next
+    }
+}
