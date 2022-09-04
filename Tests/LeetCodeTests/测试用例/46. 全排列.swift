@@ -15,7 +15,7 @@ extension LeetCodeTests {
         }
         
         casePairs.xctAssertEqual {
-            Set(solution.permute($0))
+            solution.permute($0).asSet
         }
     }
 }
