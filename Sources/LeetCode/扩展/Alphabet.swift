@@ -11,3 +11,18 @@ extension Character {
         }
     }
 }
+
+extension StringProtocol {
+    /// 各个字符的数量
+    var characterCount: [Character:Int] {
+        var result: [Character:Int] = [:]
+        for char in self {
+            guard result.keys.contains(char) else {
+                result[char] = 1
+                continue
+            }
+            result[char]! += 1
+        }
+        return result
+    }
+}
