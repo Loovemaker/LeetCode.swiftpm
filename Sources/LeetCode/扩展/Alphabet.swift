@@ -11,3 +11,17 @@ extension Character {
         }
     }
 }
+
+extension StringProtocol {
+    var alphabetCount: [Character:Int] {
+        var result: [Character:Int] = [:]
+        for char in self {
+            guard result.keys.contains(char) else {
+                result[char] = 1
+                continue
+            }
+            result[char]! += 1
+        }
+        return result
+    }
+}
