@@ -5,6 +5,6 @@ public extension Solution {
     /// - ⌛️：51%
     /// - 🫙：50%
     func isAnagram(_ s: String, _ t: String) -> Bool {
-        s.characterCount == t.characterCount
+        s.elementCount == t.elementCount
     }
 }
