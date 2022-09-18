@@ -1,6 +1,6 @@
 public extension Solution {
     
-    /// <doc:<#Document Name#>>
+    /// <doc:19.----------N---->
     ///
     /// - ⌛️：95%
     /// - 🫙：30%

@@ -43,7 +43,7 @@ public extension Solution {
     /// - ⌛️：78%
     /// - 🫙：92%
     func removeDuplicates_Cheating(_ nums: inout [Int]) -> Int {
-        nums = Set(nums).sorted()
+        nums = nums.asSet.sorted()
         return nums.count
     }
 }
