@@ -1,6 +1,5 @@
 public extension Solution {
     
-    // time beats 56%, space beats 73%
     /// <doc:21.--------->
     ///
     /// - ⌛️：56%
