@@ -24,20 +24,6 @@ extension TreeNode {
     }
 }
 
-extension Optional where Wrapped: TreeNode {
-    /// 判断两个树是否相等
-    /// - Parameters:
-    ///   - lhs: 左边的树
-    ///   - rhs: 右边的树
-    /// - Returns: 是否相等
-    public static func == (lhs: TreeNode?, rhs: TreeNode?) -> Bool {
-        (lhs === nil && rhs === nil) || (
-            lhs?.val == rhs?.val
-            && lhs?.left == rhs?.left
-            && lhs?.right == rhs?.right
-        )
-    }
-}
 extension TreeNode: Equatable {
     /// 判断两个树是否相等
     /// - Parameters:
