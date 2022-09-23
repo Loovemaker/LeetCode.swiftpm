@@ -74,11 +74,10 @@ extension ListNode {
 }
 
 extension Optional where Wrapped == ListNode {
-    typealias Predicate = (Int) throws -> Bool
     
     /// 移除值符合条件的节点
     /// - Parameter predicate: 条件
-    mutating func remove(where predicate: Predicate) rethrows {
+    mutating func remove(where predicate: (Int) throws -> Bool) rethrows {
         let dummy = ListNode(0, self)
         var prev = dummy
         var current = self
