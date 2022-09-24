@@ -3,7 +3,7 @@ import XCTest
 
 extension LeetCodeTests {
     
-    func test_frequencySort() {
+    func test_frequencySort_1636() {
         typealias Element = Int
         typealias Input = [Element]
         typealias Output = [Element]
