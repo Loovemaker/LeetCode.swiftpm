@@ -3,7 +3,7 @@ import XCTest
 
 extension LeetCodeTests {
     
-    func test_rotate() {
+    func test_rotate_48() {
         typealias Element = Int
         typealias Input = [[Element]]
         typealias Output = [[Element]]
