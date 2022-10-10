@@ -31,6 +31,14 @@ extension Collection where Element: CanExecute {
             XCTAssertEqual(results.expected, results.actual)
         }
     }
+    
+    /// 判断算法是否满足条件
+    /// - Parameter predicate: 条件
+    func xctAssert(predicate: (Input, Output) -> Bool) {
+        for element in self {
+            XCTAssert(predicate(element.input, element.output))
+        }
+    }
 }
 
 extension Collection where Element: CanExecute, Element.Output: Numeric {
